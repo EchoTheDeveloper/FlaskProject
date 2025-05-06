@@ -1,4 +1,4 @@
-﻿from flask import Flask, request, redirect, url_for, render_template
+from flask import Flask, request, redirect, url_for, render_template
 import os
 
 app = Flask(__name__)
@@ -36,6 +36,11 @@ def sync():
     global count
     selected = count
     return redirect(url_for('index'))
+    
+@app.route('/reset-number', methods=['POST'])
+def reset_number():
+    pass
+    # TODO
 
 @app.route('/luhns', methods=['POST'])
 def luhns():
