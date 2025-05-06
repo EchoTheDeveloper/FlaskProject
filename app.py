@@ -39,8 +39,11 @@ def sync():
     
 @app.route('/reset-number', methods=['POST'])
 def reset_number():
-    pass
-    # TODO
+    global selected
+    global count
+    selected = 1
+    count = 0
+    return redirect(url_for('index'))
 
 @app.route('/luhns', methods=['POST'])
 def luhns():
